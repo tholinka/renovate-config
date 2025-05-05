@@ -4,7 +4,7 @@
 		{
 			customType: "regex",
 			description: "Process annotated dependencies",
-			managerFilePatterns: [
+			fileMatch: [
 				"(^|/).+\\.env$",
 				"(^|/).+\\.sh$",
 				"(^|/).+\\.ya?ml(?:\\.j2)?$",
@@ -26,7 +26,7 @@
 		{
 			customType: "regex",
 			description: "Process GitHub download dependencies in YAML files",
-			managerFilePatterns: [
+			fileMatch: [
 				"\\.ya?ml(\\.j2)?$"
 			],
 			matchStrings: [
