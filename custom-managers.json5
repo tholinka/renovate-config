@@ -24,7 +24,7 @@
 			managerFilePatterns: [
 				'/\\.env(?:\\.j2)?$/',
 				'/\\.sh(?:\\.j2)?$/',
-				'/\\.yaml(?:\\.j2)?$/',
+				'/\\.ya?ml(?:\\.j2)?$/',
 			],
 			matchStrings: [
 				// https://github.com/rancher/system-upgrade-controller/releases/download/v0.13.2/crd.yaml
