@@ -2,9 +2,10 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
 		"config:recommended",
+		"helpers:pinGitHubActionDigests",
+		":configMigration",
 		"abandonments:recommended",
 		"docker:enableMajor",
-		"helpers:pinGitHubActionDigests",
 		"github>tholinka/renovate-config:automerge.json5",
 		"github>tholinka/renovate-config:commit-message.json5",
 		"github>tholinka/renovate-config:custom-managers.json5",
@@ -13,13 +14,14 @@
 		":enablePreCommit",
 		":automergeBranch",
 		":disableRateLimiting",
-		":dependencyDashboard",
-		":semanticCommits",
-		":timezone(America/Chicago)"
+		":dependencyDashboard"
 	],
+	"timezone": "America/Chicago",
 	"dependencyDashboardTitle": "Renovate Dashboard 🤖",
 	"suppressNotifications": [
 		"prEditedNotification",
 		"prIgnoreNotification"
-	]
+	],
+	"rebaseWhen": "auto",
+	"platformCommit": "enabled"
 }
