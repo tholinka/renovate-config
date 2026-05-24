@@ -1,0 +1,32 @@
+{
+	$schema: "https://docs.renovatebot.com/renovate-schema.json",
+	extends: [
+		"github>tholinka/renovate-config:automerge.json5",
+		"github>tholinka/renovate-config:labels.json5",
+
+		// handle j2 files
+		"github>home-operations/renovate-presets//config/managerFilePatterns.json5",
+		// mirror.gcr.io doesn't update metadata very often
+		"github>home-operations/renovate-presets//config/registryAliases.json5",
+		// handle annotated (e.g. # renovate: datasource=github-releases depName=foo/bar))
+		"github>home-operations/renovate-presets//managers/annotated.json5",
+		// handle postgres version upgrades in image name
+		"github>home-operations/renovate-presets//managers/cnpg.json5",
+		// handle oci in e.g. flux or helm
+		"github>home-operations/renovate-presets//managers/oci.json5",
+		// grab talos versions from talos factory instead
+		"github>home-operations/renovate-presets//managers/talosFactory.json5",
+		// common changelog locations
+		"github>home-operations/renovate-presets//overrides/changelogs.json5",
+		// make helmfile names nicer
+		"github>home-operations/renovate-presets//overrides/helmfile.json5",
+		// normalize mise dependency names
+		"github>home-operations/renovate-presets//overrides/mise.json5",
+		// setup renovate's semantic coommits
+		"github>home-operations/renovate-presets//policies/semanticCommits.json5",
+
+
+		// properly handle searxng versioning scheme
+		"github>home-operations/renovate-presets//versioning/searxng.json5",
+	]
+}
