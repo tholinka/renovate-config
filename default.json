@@ -11,7 +11,7 @@
 		":automergeBranch",
 		":disableRateLimiting",
 		":dependencyDashboard",
-		"github>tholinka/renovate-config:extends.json5",
+		"github>tholinka/renovate-config:extends.json5"
 	],
 	"timezone": "America/Chicago",
 	"dependencyDashboardTitle": "Renovate Dashboard 🤖",
